@@ -8,7 +8,7 @@ A álgebra relacional é um conjunto de operações que recebem uma ou duas rela
 
 ### 1. Operação PROJEÇÃO
 
-A operação de Projeção (representada por σ) é utilizada para selecionar colunas (atributos) de uma relação. A Projeção Generalizada estende essa operação, permitindo que funções sejam incluídas na lista de atributos para projeção. Essas funções podem envolver operações aritméticas e valores constantes.
+A operação de Projeção (representada por π) é utilizada para selecionar colunas (atributos) de uma relação. A Projeção Generalizada estende essa operação, permitindo que funções sejam incluídas na lista de atributos para projeção. Essas funções podem envolver operações aritméticas e valores constantes.
 
 **Exemplo:**
 
