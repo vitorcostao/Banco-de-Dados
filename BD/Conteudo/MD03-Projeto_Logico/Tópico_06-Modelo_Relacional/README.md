@@ -1,4 +1,4 @@
-# Resumo do PDF: Fundamentos em Bancos de Dados Relacionais
+# Resumo: Fundamentos em Bancos de Dados Relacionais
 
 Este estudo detalha o processo de mapeamento de um Modelo Entidade-Relacionamento (EER) para um Modelo Relacional em 7 etapas. O material é distribuído sob licença CC BY-NC-ND 4.0.
 

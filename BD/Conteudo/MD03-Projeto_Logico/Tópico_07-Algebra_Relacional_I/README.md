@@ -1,4 +1,4 @@
-# Resumo do PDF: Álgebra Relacional
+# Resumo: Fundamento em Bancos de Dados relacionais Álgebra Relacional I
 
 Este estudo aborda a Álgebra Relacional, um conjunto de operações para manipulação de bancos de dados relacionais. O material é distribuído sob licença CC BY-NC-ND 4.0.
 

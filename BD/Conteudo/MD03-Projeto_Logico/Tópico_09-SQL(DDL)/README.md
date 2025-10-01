@@ -1,4 +1,4 @@
-# Resumo: SQL: Definição de Dados
+# Resumo: Fundamentos em Bancos de Dados relacionais - SQL Definição de Dados
 
 Este estudo aborda a **Definição de Dados (DDL)** em SQL. O material é distribuído sob licença CC BY-NC-ND 4.0.
 

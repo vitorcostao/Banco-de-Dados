@@ -1,4 +1,4 @@
-# Resumo: Sistemas de Banco de Dados - Fundamentos em Bancos de Dados Relacionais
+# Resumo: Fundamentos em Bancos de Dados Relacionais Álgebra Relacional II
 
 Este estudo aborda as operações fundamentais da álgebra relacional, essenciais para a manipulação e consulta de dados em bancos de dados relacionais. O material é distribuído sob licença CC BY-NC-ND 4.0.
 
