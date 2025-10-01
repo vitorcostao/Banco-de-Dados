@@ -5,10 +5,10 @@
 **Consulta:**
 ```sql
 SELECT	first_name, last_name
-        FROM		actors 
+        FROM actors 
 INTERSECT
 SELECT	first_name, last_name
-        FROM		directors 
+        FROM directors 
 ```
 
 **Explicação:**
@@ -22,10 +22,10 @@ Esta consulta utiliza o operador `INTERSECT` para encontrar os nomes completos (
 **Consulta:**
 ```sql
 SELECT	first_name, last_name
-        FROM		actors 
+        FROM actors 
 EXCEPT
 SELECT	first_name, last_name
-        FROM		directors 
+        FROM directors 
 ```
 
 **Explicação:**
@@ -39,10 +39,10 @@ Utilizando o operador `EXCEPT`, esta consulta retorna os nomes completos de todo
 **Consulta:**
 ```sql
 SELECT	first_name, last_name
-        FROM		actors 
+        FROM actors 
 UNION
 SELECT	first_name, last_name
-        FROM		directors 
+        FROM directors 
 ```
 
 **Explicação:**
@@ -56,12 +56,12 @@ Esta consulta emprega o operador `UNION` para combinar os nomes completos de tod
 **Consulta:**
 ```sql
 SELECT	X.name
-FROM		movies as X JOIN (
+        FROM movies as X JOIN (
         SELECT	A.id
-                FROM		movies as A
+                FROM movies as A
         EXCEPT
         SELECT	B.movie_id
-                FROM		movies_directors as B 
+                FROM movies_directors as B 
         ) as Y ON X.id = Y.id
 ```
 
@@ -75,17 +75,17 @@ Esta consulta identifica filmes que não possuem diretores associados na tabela 
 
 **Consulta:**
 ```sql
-SELECT		X.first_name, X.last_name
-          FROM			actors as X JOIN (
-          SELECT		id
-                    FROM			actors
+SELECT	X.first_name, X.last_name
+          FROM	actors as X JOIN (
+          SELECT id
+                    FROM actors
           EXCEPT
-          SELECT		A.actor_id
-                    FROM			(
-                    SELECT		actor_id, COUNT(*) as TOTAL
-                              FROM			roles
+          SELECT A.actor_id
+                    FROM(
+                    SELECT actor_id, COUNT(*) as TOTAL
+                              FROM roles
                               GROUP BY	actor_id
-                              HAVING		TOTAL >= 2
+                              HAVING TOTAL >= 2
                     ) as A
           ) as Y ON X.id = Y.id
 ```
@@ -100,20 +100,20 @@ Esta consulta identifica atores que atuaram em menos de dois filmes. A subconsul
 
 **Consulta:**
 ```sql
-SELECT		X.genre, K.year, COUNT(*) as TOTAL
-          FROM			 movies_genres as X JOIN (
-          SELECT		 id
-                     FROM			movies
+SELECT	  X.genre, K.year, COUNT(*) as TOTAL
+          FROM	movies_genres as X JOIN (
+          SELECT id
+                 FROM movies
           EXCEPT
-          SELECT		 A.movie_id
-                     FROM			(
-                     SELECT		movie_id, COUNT(*) as TOTAL
-                              FROM			roles
-                              GROUP BY	movie_id
-                              HAVING		TOTAL >= 2
+          SELECT A.movie_id
+                 FROM(
+                     SELECT movie_id, COUNT(*) as TOTAL
+                            FROM roles
+                            GROUP BY movie_id
+                            HAVING TOTAL >= 2
                      ) as A
           ) as Y ON X.movie_id = Y.id
-JOIN		movies as K ON (K.id = Y.id)
+JOIN movies as K ON (K.id = Y.id)
 GROUP BY X.genre, K.year
 ```
 
