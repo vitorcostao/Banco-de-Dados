@@ -37,7 +37,7 @@ Em geral, maior capacidade implica menor velocidade, e maior velocidade implica 
 | Terciária   | Fita         | PB (jukebox)    | ≈ 2 Mbps         | ≈ 0,00003     | Não     | Dados pouco mutáveis, acesso sequencial (backups) |
 
 
-*Os valores são estimativas para fornecer uma ordem de grandeza e podem variar.*n
+*Os valores são estimativas para fornecer uma ordem de grandeza e podem variar.*
 ## Gerenciamento de Dados em SGBDs
 
 Em sistemas de banco de dados, os dados são armazenados de acordo com sua natureza:
