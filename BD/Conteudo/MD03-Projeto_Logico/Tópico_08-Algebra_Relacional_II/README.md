@@ -24,7 +24,7 @@ A Junção Interna é a operação de junção convencional que combina tuplas d
 
 **Exemplo:**
 
-`PROFESSOR JOIN DEPARTAMENTO` onde `Departamento = Numero`. O resultado mostra professores e seus respectivos departamentos, apenas para aqueles que têm um departamento correspondente.
+`PROFESSOR JOIN DEPARTAMENTO WHERE Departamento = Numero`. O resultado mostra professores e seus respectivos departamentos, apenas para aqueles que têm um departamento correspondente.
 
 #### b. Junção Externa (OUTER JOIN)
 
@@ -36,7 +36,7 @@ Neste tipo de junção, todas as tuplas da relação da esquerda são mantidas n
 
 **Exemplo:**
 
-`PROFESSOR LEFT OUTER JOIN DEPARTAMENTO` onde `Departamento = Numero`.
+`PROFESSOR LEFT OUTER JOIN DEPARTAMENTO WHERE Departamento = Numero`.
 
 #### d. Junção Externa à Direita (RIGHT OUTER JOIN)
 
@@ -44,7 +44,7 @@ Similar à junção à esquerda, mas todas as tuplas da relação da direita sã
 
 **Exemplo:**
 
-`PROFESSOR RIGHT OUTER JOIN DEPARTAMENTO` onde `Departamento = Numero`.
+`PROFESSOR RIGHT OUTER JOIN DEPARTAMENTO WHERE Departamento = Numero`.
 
 #### e. Junção Externa Completa (FULL OUTER JOIN)
 
@@ -52,7 +52,7 @@ Combina as características das junções externas à esquerda e à direita, man
 
 **Exemplo:**
 
-`PROFESSOR FULL OUTER JOIN DEPARTAMENTO` onde `Departamento = Numero`.
+`PROFESSOR FULL OUTER JOIN DEPARTAMENTO WHERE Departamento = Numero`.
 
 ### 3. Operações de Conjunto
 
