@@ -76,6 +76,8 @@ Os métodos de acesso variam conforme a organização dos arquivos:
     *   **Hashing Universal:** Mapeia chaves de tamanho variável para um espaço de tamanho `m` com probabilidade de colisão de `1/m`. Lida com colisões via lista encadeada ou Hash Múltiplo. O fator de carga (`n/m`) deve ser mantido baixo (máx. 0.75) para evitar degradação. A expansão é fundamental.
     *   **Hashing Perfeito:** Mapeia um conjunto fixo de chaves para um espaço de tamanho `m` sem colisões. Funções ocupam mais memória. A expansão significa reconstruir o hash. Hashing perfeito dinâmico é uma solução complexa.
 
+##
+
 O documento cita as seguintes obras como referências:
 
 *   [1] Elmasri, Ramez; Navathe, Sham. Fundamentals of Database Systems. 7ed. Pearson, 2016.
