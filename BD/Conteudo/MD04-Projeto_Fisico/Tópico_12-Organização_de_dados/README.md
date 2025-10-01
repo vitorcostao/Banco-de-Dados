@@ -67,7 +67,7 @@ Existem também operações de nível mais alto para conjuntos de registros:
 Os métodos de acesso variam conforme a organização dos arquivos:
 
 *   **Arquivo Heap (Pilha):** Registros dispostos sem ordem, novos registros são adicionados ao final. A pesquisa é linear (O(n)), sendo ineficiente. A inserção é eficiente, mas alterações demandam pesquisa. Exclusões podem ser diretas ou por marcação, gerando desperdício de espaço e exigindo reorganização periódica.
-    *   **Arquivo Direto (Relativo):** Um tipo de arquivo heap com registros de tamanho fixo, não espalhados e em alocação contígua. Permite acesso simples pela posição relativa, mas não auxilia na pesquisa baseada em critérios. Facilita a construção de índices.
+*   **Arquivo Direto (Relativo):** Um tipo de arquivo heap com registros de tamanho fixo, não espalhados e em alocação contígua. Permite acesso simples pela posição relativa, mas não auxilia na pesquisa baseada em critérios. Facilita a construção de índices.
 
 *   **Arquivo Sequencial:** Registros dispostos ordenadamente por um ou mais campos de ordenação. Blocos em cilindros contíguos minimizam o tempo de busca. A pesquisa é binária (O(log n)) se feita com operadores de comparação nos campos de ordenação. Operações de alteração são onerosas, pois podem exigir reorganização. Alternativas para inclusão incluem espaços vazios (problema reaparece) e arquivos temporários (overflow) que são periodicamente mesclados ao principal, mas aumentam a complexidade da pesquisa.
 
