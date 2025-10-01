@@ -81,12 +81,12 @@ SELECT	X.first_name, X.last_name
                     FROM actors
           EXCEPT
           SELECT A.actor_id
-                    FROM(
-                    SELECT actor_id, COUNT(*) as TOTAL
-                              FROM roles
-                              GROUP BY	actor_id
-                              HAVING TOTAL >= 2
-                    ) as A
+                 FROM(
+                 SELECT actor_id, COUNT(*) as TOTAL
+                        FROM roles
+                        GROUP BY actor_id
+                        HAVING TOTAL >= 2
+                 ) as A
           ) as Y ON X.id = Y.id
 ```
 
