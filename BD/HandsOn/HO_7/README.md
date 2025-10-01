@@ -35,9 +35,9 @@ Esta consulta SQL retorna o `name` (nome) de todos os filmes da tabela `movies` 
 **Consulta:**
 ```sql
 SELECT A.name, B.first_name, B.last_name
-FROM movies as A 
-JOIN movies_directors as C ON (A.id = C.movie_id) 
-JOIN directors as B ON (B.id = C.director_id)
+       FROM movies as A 
+       JOIN movies_directors as C ON (A.id = C.movie_id) 
+       JOIN directors as B ON (B.id = C.director_id)
 ```
 
 **Explicação:**
@@ -51,9 +51,9 @@ Esta consulta utiliza `JOIN`s para combinar informações de três tabelas: `mov
 **Consulta:**
 ```sql
 SELECT A.name, B.first_name, B.last_name, C.role
-FROM movies as A 
-JOIN roles as C ON (A.id = C.movie_id) 
-JOIN actors as B ON (B.id = C.actor_id)
+       FROM movies as A 
+       JOIN roles as C ON (A.id = C.movie_id) 
+       JOIN actors as B ON (B.id = C.actor_id)
 WHERE A.rank > 6
 ```
 
@@ -68,8 +68,9 @@ Esta consulta complexa busca detalhes sobre filmes, atores e seus papéis, filtr
 **Consulta:**
 ```sql
 SELECT A.id, A.first_name, A.last_name, COUNT(*) as TOTAL
-FROM directors as A JOIN movies_directors as B ON (A.id = B.director_id)
-GROUP BY A.id, A.first_name, A.last_name
+       FROM directors as A 
+       JOIN movies_directors as B ON (A.id = B.director_id)
+       GROUP BY A.id, A.first_name, A.last_name
 ```
 
 **Explicação:**
@@ -98,8 +99,8 @@ Esta consulta agrega os dados da tabela `movies_genres` para contar quantos film
 **Consulta:**
 ```sql
 SELECT A.genre, AVG(B.rank) as MEDIA, MIN(B.rank) as MINIMO, MAX(B.rank) as MAXIMO
-FROM movies_genres as A JOIN movies as B ON (A.movie_id = B.id)
-GROUP BY A.genre
+       FROM movies_genres as A JOIN movies as B ON (A.movie_id = B.id)
+       GROUP BY A.genre
 ```
 
 **Explicação:**
