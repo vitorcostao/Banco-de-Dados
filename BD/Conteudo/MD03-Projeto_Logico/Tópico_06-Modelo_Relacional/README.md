@@ -62,6 +62,8 @@ Para cada relacionamento n-ário (onde n > 2), cria-se uma nova relação. As ch
 
 ## Conclusão
 
-O documento fornece um guia detalhado e sistemático para a conversão de um diagrama EER em um modelo relacional, essencial para a implementação de bancos de dados. As referências bibliográficas incluem obras clássicas de Elmasri & Navathe, Silberschatz & Korth & Sudarshan, e Date.
+O documento cita as seguintes obras como referências:
 
-
+*   [1] Elmasri, Ramez; Navathe, Sham. Fundamentals of Database Systems. 7ed. Pearson, 2016.
+*   [2] Silberschatz, Abraham; Korth, Henry F.; Sudarshan, S. Database System Concepts. 6ed. McGraw-Hill, 2011.
+*   [3] Date, Christopher J. An Introduction to Database Systems. 8ed. Pearson, 2004.

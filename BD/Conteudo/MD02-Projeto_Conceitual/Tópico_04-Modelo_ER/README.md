@@ -93,8 +93,8 @@ Para garantir clareza e consistência na construção de Diagramas ER, é fundam
 *   **Atributo:** Nome com as letras iniciais de cada palavra em maiúscula. Atributos multivalorados podem ter o nome no plural.
 
 ## Referências Bibliográficas
+O documento cita as seguintes obras como referências:
 
-[1] Elmasri, Ramez; Navathe, Sham. Fundamentals of Database Systems. 7ed. Pearson, 2016.
-[2] Silberschatz, Abraham; Korth, Henry F.; Sudarshan, S. Database System Concepts. 6ed. McGraw-Hill, 2011.
-[3] Date, Christopher J. An Introduction to Database Systems. 8ed. Pearson, 2004.
-
+*   [1] Elmasri, Ramez; Navathe, Sham. Fundamentals of Database Systems. 7ed. Pearson, 2016.
+*   [2] Silberschatz, Abraham; Korth, Henry F.; Sudarshan, S. Database System Concepts. 6ed. McGraw-Hill, 2011.
+*   [3] Date, Christopher J. An Introduction to Database Systems. 8ed. Pearson, 2004.

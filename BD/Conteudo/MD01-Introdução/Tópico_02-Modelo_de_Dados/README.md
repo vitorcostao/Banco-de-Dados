@@ -39,9 +39,8 @@ Descreve os detalhes de armazenamento dos dados em memória, incluindo:
 
 ## 5. Referências Bibliográficas
 
-O documento cita as seguintes obras:
+O documento cita as seguintes obras como referências:
 
-*   Elmasri, Ramez; Navathe, Sham. Fundamentals of Database Systems. 7ed. Pearson, 2016.
-*   Silberschatz, Abraham; Korth, Henry F.; Sudarshan, S. Database System Concepts. 6ed. McGraw-Hill, 2011.
-*   Date, Christopher J. An Introduction to Database Systems. 8ed. Pearson, 2004.
-
+*   [1] Elmasri, Ramez; Navathe, Sham. Fundamentals of Database Systems. 7ed. Pearson, 2016.
+*   [2] Silberschatz, Abraham; Korth, Henry F.; Sudarshan, S. Database System Concepts. 6ed. McGraw-Hill, 2011.
+*   [3] Date, Christopher J. An Introduction to Database Systems. 8ed. Pearson, 2004.

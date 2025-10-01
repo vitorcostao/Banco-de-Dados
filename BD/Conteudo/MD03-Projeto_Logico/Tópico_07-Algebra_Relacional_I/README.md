@@ -52,6 +52,8 @@ Esta operação agrega tuplas de uma relação a partir de uma lista de atributo
 
 ## Conclusão
 
-O documento apresenta as operações fundamentais da Álgebra Relacional, que são a base para a manipulação e consulta de dados em bancos de dados relacionais. As referências bibliográficas incluem obras clássicas de Elmasri & Navathe, Silberschatz & Korth & Sudarshan, e Date.
+O documento cita as seguintes obras como referências:
 
-
+*   [1] Elmasri, Ramez; Navathe, Sham. Fundamentals of Database Systems. 7ed. Pearson, 2016.
+*   [2] Silberschatz, Abraham; Korth, Henry F.; Sudarshan, S. Database System Concepts. 6ed. McGraw-Hill, 2011.
+*   [3] Date, Christopher J. An Introduction to Database Systems. 8ed. Pearson, 2004.

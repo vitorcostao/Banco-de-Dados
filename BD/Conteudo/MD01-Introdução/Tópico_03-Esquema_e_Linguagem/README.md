@@ -46,8 +46,8 @@ As linguagens DML se diferenciam quanto à forma como as operações são especi
 Tipicamente, os SGBDs não consideram as diferentes linguagens como distintas. O **SQL (Structured Query Language)** é um exemplo de linguagem de consulta estruturada que combina VDL, DDL, SDL e DML, além de incluir instruções para especificação de restrições, evolução de esquema e outros recursos.
 
 ## Referências Bibliográficas
+O documento cita as seguintes obras como referências:
 
-[1] Elmasri, Ramez; Navathe, Sham. Fundamentals of Database Systems. 7ed. Pearson, 2016.
-[2] Silberschatz, Abraham; Korth, Henry F.; Sudarshan, S. Database System Concepts. 6ed. McGraw-Hill, 2011.
-[3] Date, Christopher J. An Introduction to Database Systems. 8ed. Pearson, 2004.
-
+*   [1] Elmasri, Ramez; Navathe, Sham. Fundamentals of Database Systems. 7ed. Pearson, 2016.
+*   [2] Silberschatz, Abraham; Korth, Henry F.; Sudarshan, S. Database System Concepts. 6ed. McGraw-Hill, 2011.
+*   [3] Date, Christopher J. An Introduction to Database Systems. 8ed. Pearson, 2004.

@@ -93,15 +93,6 @@ Para garantir clareza e consistência na construção de Diagramas ER, é fundam
 *   **Relacionamento:** Nome no singular, com todas as letras em minúsculas.
 *   **Atributo:** Nome com as letras iniciais de cada palavra em maiúscula. Atributos multivalorados podem ter o nome no plural.
 
-## Referências Bibliográficas
-
-[1] Elmasri, Ramez; Navathe, Sham. Fundamentals of Database Systems. 7ed. Pearson, 2016.
-[2] Silberschatz, Abraham; Korth, Henry F.; Sudarshan, S. Database System Concepts. 6ed. McGraw-Hill, 2011.
-[3] Date, Christopher J. An Introduction to Database Systems. 8ed. Pearson, 2004.
-
-
-
-
 ## Modelo ER Estendido (EER)
 
 O Modelo Entidade-Relacionamento Estendido (EER) é uma evolução do Modelo ER, incorporando conceitos avançados para modelagem semântica de dados, permitindo lidar com requisitos mais complexos e precisos. Os principais conceitos introduzidos incluem herança, supertipos e subtipos, e restrições mais elaboradas, como generalização e especialização.
@@ -153,8 +144,8 @@ O projeto conceitual utilizando o EER é um processo iterativo que busca o model
 4.  A escolha das restrições de disjunção, sobreposição e totalidade deve ser rigorosamente baseada nas regras do minimundo. Na ausência de uma especificação explícita, o padrão menos restritivo de sobreposição parcial é geralmente o mais adequado.
 
 ## Referências Bibliográficas
+O documento cita as seguintes obras como referências:
 
-[1] Elmasri, Ramez; Navathe, Sham. Fundamentals of Database Systems. 7ed. Pearson, 2016.
-[2] Silberschatz, Abraham; Korth, Henry F.; Sudarshan, S. Database System Concepts. 6ed. McGraw-Hill, 2011.
-[3] Date, Christopher J. An Introduction to Database Systems. 8ed. Pearson, 2004.
-
+*   [1] Elmasri, Ramez; Navathe, Sham. Fundamentals of Database Systems. 7ed. Pearson, 2016.
+*   [2] Silberschatz, Abraham; Korth, Henry F.; Sudarshan, S. Database System Concepts. 6ed. McGraw-Hill, 2011.
+*   [3] Date, Christopher J. An Introduction to Database Systems. 8ed. Pearson, 2004.
