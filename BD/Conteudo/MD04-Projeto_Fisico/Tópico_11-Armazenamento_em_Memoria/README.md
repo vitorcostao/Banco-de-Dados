@@ -24,16 +24,20 @@ Em geral, maior capacidade implica menor velocidade, e maior velocidade implica 
 
 ### Hierarquia de Memória Detalhada
 
+# Hierarquia de Memória
+
 | Tipo        | Nome         | Capacidade      | Velocidade (bps) | Custo (R$/MB) | Volátil | Uso Principal                                     |
-| :---------- | :----------- | :-------------- | :--------------- | :------------ | :------ | :------------------------------------------------ |n| Primária    | Registrador  | KB              | ≈ 60 Tbps        | > 500         | Sim     | Execução de instruções de programa                |
-| Primária    | Cache        | MB (L0 a L4)    | ≈ 6 Tbps (L1)    | > 100 (L0)    | Sim     | Acelera execução de instruções (pré-busca)        |
-| Primária    | RAM          | Dezenas de GB   | ≈ 80 Gbps        | ≈ 0,05        | Sim     | Manter instruções e dados temporários             |
-| Secundária  | Flash        | Alguns TB       | ≈ 5 Gbps         | ≈ 0,0007      | Não     | Manter dados de maneira persistente               |
-| Secundária  | HD           | Dezenas de TB   | ≈ 100 Mbps       | ≈ 0,0002      | Não     | Manter dados de maneira persistente               |
+| ----------- | ------------ | --------------- | ---------------- | ------------- | ------- | ------------------------------------------------ |
+| Primária    | Registrador  | KB              | ≈ 60 Tbps        | > 500         | Sim     | Execução de instruções de programa               |
+| Primária    | Cache        | MB (L0 a L4)    | ≈ 6 Tbps (L1)    | > 100 (L0)    | Sim     | Acelera execução de instruções (pré-busca)       |
+| Primária    | RAM          | Dezenas de GB   | ≈ 80 Gbps        | ≈ 0,05        | Sim     | Manter instruções e dados temporários            |
+| Secundária  | Flash        | Alguns TB       | ≈ 5 Gbps         | ≈ 0,0007      | Não     | Manter dados de maneira persistente              |
+| Secundária  | HD           | Dezenas de TB   | ≈ 100 Mbps       | ≈ 0,0002      | Não     | Manter dados de maneira persistente              |
 | Terciária   | Óptica       | PB (jukebox)    | ≈ 20 Mbps        | ≈ 0,0001      | Não     | Dados pouco mutáveis, acesso sequencial (multimídia) |
 | Terciária   | Fita         | PB (jukebox)    | ≈ 2 Mbps         | ≈ 0,00003     | Não     | Dados pouco mutáveis, acesso sequencial (backups) |
 
-*Os valores são estimativas para fornecer uma ordem de grandeza e podem variar.*n
+
+*Os valores são estimativas para fornecer uma ordem de grandeza e podem variar.*
 ## Gerenciamento de Dados em SGBDs
 
 Em sistemas de banco de dados, os dados são armazenados de acordo com sua natureza:

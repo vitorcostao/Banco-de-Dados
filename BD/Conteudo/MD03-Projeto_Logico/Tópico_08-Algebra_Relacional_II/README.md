@@ -8,7 +8,7 @@ A álgebra relacional é um conjunto de operações que recebem uma ou duas rela
 
 ### 1. Operação PROJEÇÃO
 
-A operação de Projeção (representada por σ) é utilizada para selecionar colunas (atributos) de uma relação. A Projeção Generalizada estende essa operação, permitindo que funções sejam incluídas na lista de atributos para projeção. Essas funções podem envolver operações aritméticas e valores constantes.
+A operação de Projeção (representada por π) é utilizada para selecionar colunas (atributos) de uma relação. A Projeção Generalizada estende essa operação, permitindo que funções sejam incluídas na lista de atributos para projeção. Essas funções podem envolver operações aritméticas e valores constantes.
 
 **Exemplo:**
 
@@ -24,7 +24,7 @@ A Junção Interna é a operação de junção convencional que combina tuplas d
 
 **Exemplo:**
 
-`PROFESSOR JOIN DEPARTAMENTO` onde `Departamento = Numero`. O resultado mostra professores e seus respectivos departamentos, apenas para aqueles que têm um departamento correspondente.
+`PROFESSOR JOIN DEPARTAMENTO WHERE Departamento = Numero`. O resultado mostra professores e seus respectivos departamentos, apenas para aqueles que têm um departamento correspondente.
 
 #### b. Junção Externa (OUTER JOIN)
 
@@ -36,7 +36,7 @@ Neste tipo de junção, todas as tuplas da relação da esquerda são mantidas n
 
 **Exemplo:**
 
-`PROFESSOR LEFT OUTER JOIN DEPARTAMENTO` onde `Departamento = Numero`.
+`PROFESSOR LEFT OUTER JOIN DEPARTAMENTO WHERE Departamento = Numero`.
 
 #### d. Junção Externa à Direita (RIGHT OUTER JOIN)
 
@@ -44,7 +44,7 @@ Similar à junção à esquerda, mas todas as tuplas da relação da direita sã
 
 **Exemplo:**
 
-`PROFESSOR RIGHT OUTER JOIN DEPARTAMENTO` onde `Departamento = Numero`.
+`PROFESSOR RIGHT OUTER JOIN DEPARTAMENTO WHERE Departamento = Numero`.
 
 #### e. Junção Externa Completa (FULL OUTER JOIN)
 
@@ -52,7 +52,7 @@ Combina as características das junções externas à esquerda e à direita, man
 
 **Exemplo:**
 
-`PROFESSOR FULL OUTER JOIN DEPARTAMENTO` onde `Departamento = Numero`.
+`PROFESSOR FULL OUTER JOIN DEPARTAMENTO WHERE Departamento = Numero`.
 
 ### 3. Operações de Conjunto
 
