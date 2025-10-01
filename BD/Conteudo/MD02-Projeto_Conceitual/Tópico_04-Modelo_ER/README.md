@@ -1,4 +1,4 @@
-# Resumo Consolidado: Fundamentos em Bancos de Dados Relacionais e Modelo Entidade-Relacionamento
+# Resumo: Fundamentos em Bancos de Dados Relacionais e Modelo Entidade-Relacionamento
 
 Este estudo apresenta um resumo dos conceitos fundamentais em sistemas de banco de dados, abordando tanto a estrutura e organização dos dados quanto o modelo conceitual. Serão explorados os temas de esquema e instância de banco de dados, arquitetura de três esquemas, independência de dados, linguagens de banco de dados e o Modelo Entidade-Relacionamento (ER).
 O material é distribuído sob licença CC BY-NC-ND 4.0.
