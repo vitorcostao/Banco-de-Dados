@@ -43,7 +43,7 @@ distribuição de dados entre os discos e os mecanismos de leitura e escrita sã
 
 - **Redundância:** Possibilidade de ampliação da disponibilidade e confiabilidade por ser tolerante a falhas, visto que distribui cópias de dados em vários discos.
 
-## Principais conjuntos de discos
+## 4. Principais conjuntos de discos
 
 - ### RAID 0
 
@@ -68,7 +68,7 @@ Trata-se de um conjunto de dados espelhados com distribuição, ou seja, uma com
 falhas enquanto houver cópias espelhadas. Desse modo, a velocidade e a capacidade são proporcionais ao número de discos
 e inversamente aos espelhos.
 
-## Abordagens de Armazenamento
+## 5. Abordagens de Armazenamento
 
 - **DAS (Direct-Attached Storage):** Discos magnéticos contendo arquivos dos bancos de dados intergrados ao hardware do sistema
 de banco de dados.
