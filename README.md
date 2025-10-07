@@ -48,3 +48,6 @@ Dentro do repositório existem duas pastas principais:
 
      * Armazenamento em memória
      * Organização dos dados
+     * Tecnologias de armazenamento
+     * Indexação de nível único
+     * Indexação multinível
