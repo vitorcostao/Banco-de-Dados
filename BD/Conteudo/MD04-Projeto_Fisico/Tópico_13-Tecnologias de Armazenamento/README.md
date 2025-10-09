@@ -54,7 +54,7 @@ Ou seja, é uma configuração com ótimo desempenho porém com risco alto.
 - ### RAID 1
 
 Trata-se de um conjunto de discos espelhados sem distribuição. Nesta configuração, o desempenho é equivalente aos discos sem RAID e a
-a taxa de falhas é menor. O RAID 1 pode falhar a quantia de discos menos um, pois se eu tiver três discos e falhar duas vezes, ao realizar
+taxa de falhas é menor. O RAID 1 pode falhar a quantia de discos menos um, pois se eu tiver três discos e falhar duas vezes, ao realizar
 uma terceira falha, os dados serão perdidos.
 
 - ### RAID 5
