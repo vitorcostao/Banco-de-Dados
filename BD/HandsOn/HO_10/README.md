@@ -145,6 +145,18 @@ Para o índice secundário, cada registro ocupa 62 bytes, sendo 11 do CPF_Client
 - **Espaço desperdiçado:** (2 * 1024 - (33 * 62)) = 2.
 - **Espaço utilizado:** (606.061 * 2048) = 1,24 GB.
 
+### Tabela de dados
+
+| **Entidade / Índice Secundário**                        | **Atributos Indexados**                  | **Tamanho por Registro (bytes)** | **Fator de Bloco** | **Nº de Blocos** | **Espaço Desperdiçado (bytes)**  | **Espaço Utilizado**  |
+|---------------------------------------------------------|------------------------------------------|----------------------------------|--------------------|------------------|----------------------------------|-----------------------|
+| Funcionários                                            | CPF_Supervisor                           | 27                               | 75                 | 47               | 23                               | 96 KB                 |
+| Filme_Ator                                              | CodFilme + CodAtor                       | 48                               | 42                 | 23.810           | 32                               | 48,76 MB              |
+| Filmes                                                  | CodFilme                                 | 32                               | 64                 | 156.250          | 0                                | 320 MB                |
+| Pagamentos                                              | ID_Midia + CPF_Cliente                   | 51                               | 40                 | 1.250.000        | 8                                | 2,56 GB               |
+| Aluguel                                                 | CPF_Cliente + ID_Midia + CPF_Funcionario | 62                               | 33                 | 606.061          | 2                                | 1,24 GB               |
+
+
+---
 
 ## Arquivo Indexado
 
