@@ -1,4 +1,4 @@
-# Respostas Hands On
+# Respostas Hands On 10
 
 ## Enunciado
 
@@ -40,7 +40,7 @@ Para clientes, o arquivo de índice ocupará, por registro, 27 bytes, que são 1
 - **Fator de Bloco:** (2*1024) / (11 + 16) = 75.
 - **Número de Blocos:** (100000/ 75) = 1334.
 - **Espaço desperdiçado:** (2 * 1024 - (75 * 27)) = 23.
-- **Espaço utilizado:** (1352 * 2048) = 2,54 MB.
+- **Espaço utilizado:** (1352 * 2048) = 2,64 MB.
 
 ### Filmes
 
@@ -49,7 +49,7 @@ Para atores, o arquivo de índice ocupará, por registro, 32 bytes, que são 16 
 - **Fator de Bloco:** (2*1024) / (16 + 16) = 64.
 - **Número de Blocos:** (2000000/ 64) = 31250.
 - **Espaço desperdiçado:** (2 * 1024 - (64 * 32)) = 0.
-- **Espaço utilizado:** (31250 * 2048) = 64 MB.
+- **Espaço utilizado:** (31250 * 2048) = 61 MB.
 
 ### Funcionários
 
@@ -58,7 +58,7 @@ Para funcionários, o arquivo de índice ocupará, por registro, 27 bytes, que s
 - **Fator de Bloco:** (2*1024) / (11 + 16) = 75.
 - **Número de Blocos:** (3500/ 75) = 47.
 - **Espaço desperdiçado:** (2 * 1024 - (75 * 27)) = 23.
-- **Espaço utilizado:** (47 * 2048) = 96 KB.
+- **Espaço utilizado:** (47 * 2048) = 94 KB.
 
 ### Mídias
 
@@ -77,7 +77,7 @@ Para pagamentos, o arquivo de índice ocupará, por registro, 64 bytes, que são
 - **Fator de Bloco:** (2*1024) / (48 + 16) = 32.
 - **Número de Blocos:** (50000000/ 32) = 1562500.
 - **Espaço desperdiçado:** (2 * 1024 - (32 * 64)) = 0.
-- **Espaço utilizado:** (1562500 * 2048) = 2,91 GB.
+- **Espaço utilizado:** (1562500 * 2048) = 2,98 GB.
 
 
 ### Tabela de dados

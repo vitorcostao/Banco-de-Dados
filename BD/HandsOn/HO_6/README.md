@@ -1,4 +1,4 @@
-# Sistema de Gestão Acadêmica
+# Respostas HandsOn 6
 
 Este repositório contém o esquema do banco de dados para o Sistema de Gestão Acadêmica. O banco de dados foi projetado para gerenciar informações sobre áreas, alunos, cursos, professores, módulos, tópicos e matrículas.
 
