@@ -107,54 +107,73 @@ Para o índice secundário, cada registro ocupa 27 bytes, sendo 11 do CPF_Superv
 - **Espaço utilizado:** (47 * 2048) = 96 KB.
 
 
-### Índice Secundário (CodFilme + CodAtor)
-
-Para o índice secundário, cada registro ocupa 48 bytes, sendo 16 do CodFilme, 16 do CodAtor e 16 do ponteiro para o bloco do disco. Logo, tem-se:
-
-- **Fator de Bloco:** (2 * 1024) / (16 + 16 + 16) = 42.
-- **Número de Blocos:** (1.000.000 / 42) = 23.810.
-- **Espaço desperdiçado:** (2 * 1024 - (42 * 48)) = 32.
-- **Espaço utilizado:** (23.810 * 2048) = 48,76 MB.
-
-
 ### Índice Secundário (CodFilme)
 
 Para o índice secundário, cada registro ocupa 32 bytes, sendo 16 do CodFilme e 16 do ponteiro para o bloco do disco. Logo, tem-se:
 
 - **Fator de Bloco:** (2 * 1024) / (16 + 16) = 64.
-- **Número de Blocos:** (10.000.000 / 64) = 156.250.
-- **Espaço desperdiçado:** (2 * 2024 - (64 * 32)) = 0.
-- **Espaço utilizado:** (156.250 * 2048) = 320 MB.
+- **Número de Blocos:** (1.000.000 / 32) = 15625.
+- **Espaço desperdiçado:** (2 * 1024 - (64 * 32)) = 0.
+- **Espaço utilizado:** (15635 * 2048) = 32 MB.
 
 
-### Índice Secundário (ID_Midia + CPF_Cliente)
+### Índice Secundário (CodAtor)
 
-Para o índice secundário, cada registro ocupa 51 bytes, sendo 24 do ID_Midia, 11 do CPF_Cliente e 16 do ponteiro para o bloco do disco. Logo, tem-se:
+Para o índice secundário, cada registro ocupa 32 bytes, sendo 16 do CodAtor e 16 do ponteiro para o bloco do disco. Logo, tem-se:
 
-- **Fator de Bloco:** (2*1024) / (24 + 11 + 16) = 40.
-- **Número de Blocos:** (50.000.000 / 40) = 1.250.000.
-- **Espaço desperdiçado:** (2 * 1024 - (40 * 51)) = 8.
-- **Espaço utilizado:** (1.250.000 * 2048) = 2,56 GB.
+- **Fator de Bloco:** (2 * 1024) / (16 + 16) = 64.
+- **Número de Blocos:** (1.000.000 / 32) = 15625.
+- **Espaço desperdiçado:** (2 * 1024 - (64 * 32)) = 0.
+- **Espaço utilizado:** (15635 * 2048) = 32 MB.
 
-### Índice Secundário (CPF_Cliente + ID_Midia + CPF_Funcionario)
 
-Para o índice secundário, cada registro ocupa 62 bytes, sendo 11 do CPF_Cliente, 24 do ID_Midia, 11 do CPF_Funcionario e 16 do ponteiro para o bloco do disco. Logo, tem-se:
+### Índice Secundário (ID_Midia)
 
-- **Fator de Bloco:** (2*1024) / (11 + 24 + 11 + 16) = 33.
-- **Número de Blocos:** (20.000.000 / 33) = 606.061.
-- **Espaço desperdiçado:** (2 * 1024 - (33 * 62)) = 2.
-- **Espaço utilizado:** (606.061 * 2048) = 1,24 GB.
+Para o índice secundário, cada registro ocupa 40 bytes, sendo 24 do ID_Midia e 16 do ponteiro para o bloco do disco. Logo, tem-se:
 
-### Tabela de dados
+- **Fator de Bloco:** (2*1024) / (24 + 16) = 51.
+- **Número de Blocos:** (50.000.000 / 51) = 980.393.
+- **Espaço desperdiçado:** (2 * 1024 - (51 * 40)) = 8.
+- **Espaço utilizado:** (980.393 * 2048) = 2 GB.
 
-| **Entidade / Índice Secundário**                        | **Atributos Indexados**                  | **Tamanho por Registro (bytes)** | **Fator de Bloco** | **Nº de Blocos** | **Espaço Desperdiçado (bytes)**  | **Espaço Utilizado**  |
-|---------------------------------------------------------|------------------------------------------|----------------------------------|--------------------|------------------|----------------------------------|-----------------------|
-| Funcionários                                            | CPF_Supervisor                           | 27                               | 75                 | 47               | 23                               | 96 KB                 |
-| Filme_Ator                                              | CodFilme + CodAtor                       | 48                               | 42                 | 23.810           | 32                               | 48,76 MB              |
-| Filmes                                                  | CodFilme                                 | 32                               | 64                 | 156.250          | 0                                | 320 MB                |
-| Pagamentos                                              | ID_Midia + CPF_Cliente                   | 51                               | 40                 | 1.250.000        | 8                                | 2,56 GB               |
-| Aluguel                                                 | CPF_Cliente + ID_Midia + CPF_Funcionario | 62                               | 33                 | 606.061          | 2                                | 1,24 GB               |
+### Índice Secundário (CPF_Cliente)
 
+Para o índice secundário, cada registro ocupa 27 bytes, sendo 11 do CPF_Cliente e 16 do ponteiro para o bloco do disco. Logo, tem-se:
+
+- **Fator de Bloco:** (2*1024) / (11 + 16) = 75.
+- **Número de Blocos:** (50.000.000 / 75) = 666.667.
+- **Espaço desperdiçado:** (2 * 1024 - (75 * 27)) = 23.
+- **Espaço utilizado:** (666667 * 2048) = 1,37 GB.
+
+
+### Índice Secundário (ID_Midia)
+
+Para o índice secundário, cada registro ocupa 40 bytes, sendo 24 do ID_Midia e 16 do ponteiro para o bloco do disco. Logo, tem-se:
+
+- **Fator de Bloco:** (2*1024) / (24 + 16) = 51
+- **Número de Blocos:** (50.000.000 / 51) = 980.393
+- **Espaço desperdiçado:** (2 * 1024 - (51 * 40)) = 8
+- **Espaço utilizado:** (980.393 * 2048) ≈ 2,007 GB
+
+
+### Índice Secundário (CPF_Funcionario)
+
+Para o índice secundário, cada registro ocupa 27 bytes, sendo 11 do CPF_Funcionario e 16 do ponteiro para o bloco do disco. Logo, tem-se:
+
+- **Fator de Bloco:** (2*1024) / (11 + 16) = 75
+- **Número de Blocos:** (20.000.000 / 75) = 266.667
+- **Espaço desperdiçado:** (2 * 1024 - (75 * 27)) = 23
+- **Espaço utilizado:** (266.667 * 2048) ≈ 0,546 GB
+
+| **Índice Secundário**   | **Atributos Indexados** | **Tamanho por Registro (bytes)** | **Fator de Bloco** | **Nº de Blocos** | **Espaço Desperdiçado (bytes)** |**Espaço Utilizado**      |
+| :---------------------- | :---------------------- | :------------------------------- | :----------------- | :--------------- | :------------------------------ | :---------- |
+| **CPF_Supervisor**      | CPF_Supervisor          | 27 | 75 | 47      | 23 | 96 KB     |
+| **CodFilme**            | CodFilme                | 32 | 64 | 15.625  | 0  | 32 MB     |
+| **CodAtor**             | CodAtor                 | 32 | 64 | 15.625  | 0  | 32 MB     |
+| **ID_Midia (Tabela 1)** | ID_Midia                | 40 | 51 | 980.393 | 8  | 2 GB      |
+| **CPF_Cliente**         | CPF_Cliente             | 27 | 75 | 666.667 | 23 | 1,37 GB   |
+| **ID_Midia (Tabela 2)** | ID_Midia                | 40 | 51 | 980.393 | 8  | 2 GB |
+| **CPF_Funcionario**     | CPF_Funcionario         | 27 | 75 | 266.667 | 23 | 0,546 GB |
 
 ---
 
