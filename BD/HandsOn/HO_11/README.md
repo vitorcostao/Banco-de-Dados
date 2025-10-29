@@ -28,121 +28,97 @@ que cada ponteiro de nó da árvore B+ ocupe 12B, que os arquivos possuem regist
 
 ### Atores
 
-Para atores, o arquivo de índice ocupará, por registro, 32 bytes, que são 16 do código de atores e 16 do ponteiro para o bloco do disco. Logo, tem-se:
+Para atores, o arquivo de índice ocupará, por registro, 32 bytes, que são 16 do código de atores e 16 do ponteiro para o bloco do disco.  
 
-- **Fator de Bloco:** (2*1024) / (16 + 16) = 64.
-- **Número de Blocos:** BM1 = (10000/ 64) = 157 e BM2 = 157 / 64 = 3.
-- **Espaço utilizado:** (160 * 2048) = 320 KB.
-- **Número de acesso a blocos:**
+- **Fator de Bloco (FB):** 64  
+- **Número de blocos por nível:**  
+  - Nível 0 (BM1) = 157  
+  - Nível 1 (BM2) = 3  
+  - Nível 2 (BM3) = 1  
+- **Espaço utilizado:** 322 KB  
+- **Níveis do índice:** 3
 
-### Clientes 
 
-Para clientes, o arquivo de índice ocupará, por registro, 27 bytes, que são 11 do CPF e 16 do ponteiro para o bloco do disco. Logo, tem-se:
+### Clientes
 
-- **Fator de Bloco:** (2*1024) / (11 + 16) = 75.
-- **Número de Blocos:** BM1 = (100000/ 75) = 1334 e BM2 = 1334 / 75 = 18.
-- **Espaço utilizado:** (1352 * 2048) = 2,64 MB.
+Para clientes, o arquivo de índice ocupará, por registro, 27 bytes, que são 11 do CPF e 16 do ponteiro para o bloco do disco.  
+
+- **Fator de Bloco (FB):** 75  
+- **Número de blocos por nível:**  
+  - Nível 0 (BM1) = 1334  
+  - Nível 1 (BM2) = 18  
+  - Nível 2 (BM3) = 1  
+- **Espaço utilizado:** 2,64 MB  
+- **Níveis do índice:** 3
+
 
 ### Filmes
 
-Para atores, o arquivo de índice ocupará, por registro, 32 bytes, que são 16 do código de filmes e 16 do ponteiro para o bloco do disco. Logo, tem-se:
+Para filmes, o arquivo de índice ocupará, por registro, 32 bytes, que são 16 do código do filme e 16 do ponteiro para o bloco do disco.  
 
-- **Fator de Bloco:** (2*1024) / (16 + 16) = 64.
-- **Número de Blocos:** BM1 = (2000000/ 64) = 31250 e BM2 = 31250 / 64 = 489.
-- **Espaço utilizado:** (31739 * 2048) = 61,95 MB.
+- **Fator de Bloco (FB):** 64  
+- **Número de blocos por nível:**  
+  - Nível 0 (BM1) = 31250  
+  - Nível 1 (BM2) = 489  
+  - Nível 2 (BM3) = 8  
+  - Nível 3 (BM4) = 1  
+- **Espaço utilizado:** 61,97 MB  
+- **Níveis do índice:** 4
+
 
 ### Funcionários
 
-Para funcionários, o arquivo de índice ocupará, por registro, 27 bytes, que são 11 do CPF e 16 do ponteiro para o bloco do disco. Logo, tem-se:
+Para funcionários, o arquivo de índice ocupará, por registro, 27 bytes, que são 11 do CPF e 16 do ponteiro para o bloco do disco.  
 
-- **Fator de Bloco:** (2*1024) / (11 + 16) = 75
-- **Número de Blocos:** BM1 = (3500 / 75) = 47 e BM2 = 47 / 75 = 1
-- **Espaço utilizado:** (47 + 1) * 2048 = 96,5 KB
+- **Fator de Bloco (FB):** 75  
+- **Número de blocos por nível:**  
+  - Nível 0 (BM1) = 47  
+  - Nível 1 (BM2) = 1  
+- **Espaço utilizado:** 96 KB  
+- **Níveis do índice:** 2
 
 
 ### Mídias
 
-Para mídias, o arquivo de índice ocupará, por registro, 40 bytes, que são 24 do identificador da mídia e 16 do ponteiro para o bloco do disco. Logo, tem-se:
+Para mídias, o arquivo de índice ocupará, por registro, 40 bytes, que são 24 do identificador da mídia e 16 do ponteiro para o bloco do disco.  
 
-- **Fator de Bloco:** (2*1024) / (24 + 16) = 51
-- **Número de Blocos:** BM1 = (10000000 / 51) = 196078 e BM2 = 196078 / 51 = 3847
-- **Espaço utilizado:** (196078 + 3847) * 2048 = 390,3 MB
-
+- **Fator de Bloco (FB):** 51  
+- **Número de blocos por nível:**  
+  - Nível 0 (BM1) = 196079  
+  - Nível 1 (BM2) = 3849  
+  - Nível 2 (BM3) = 76  
+  - Nível 3 (BM4) = 2  
+  - Nível 4 (BM5) = 1  
+- **Espaço utilizado:** 390,5 MB  
+- **Níveis do índice:** 5
 
 
 ### Pagamentos
 
-Para pagamentos, o arquivo de índice ocupará, por registro, 64 bytes, que são 48 do identificador do pagamento e 16 do ponteiro para o bloco do disco. Logo, tem-se:
+Para pagamentos, o arquivo de índice ocupará, por registro, 64 bytes, que são 48 do identificador do pagamento e 16 do ponteiro para o bloco do disco.  
 
-- **Fator de Bloco:** (2*1024) / (48 + 16) = 32
-- **Número de Blocos:** BM1 = (50000000 / 32) = 1562500 e BM2 = 1562500 / 32 = 48829
-- **Espaço utilizado:** (1562500 + 48829) * 2048 = 3,07 GB
+- **Fator de Bloco (FB):** 32  
+- **Número de blocos por nível:**  
+  - Nível 0 (BM1) = 1562500  
+  - Nível 1 (BM2) = 48829  
+  - Nível 2 (BM3) = 1527  
+  - Nível 3 (BM4) = 48  
+  - Nível 4 (BM5) = 2  
+  - Nível 5 (BM6) = 1  
+- **Espaço utilizado:** 3,07 GB  
+- **Níveis do índice:** 6
 
 
+### Tabela de Dados do Índice Multinível Estático
 
-### Tabela de dados
+| **Entidade / Índice** | **Tamanho por Registro (bytes)** | **Fator de Bloco** | **Nº Total de Blocos** | **Espaço Utilizado** |
+|-----------------------|----------------------------------|--------------------|------------------------|---------------------|
+| Atores                | 32                              | 64                | 161                    | 322 KB              |
+| Clientes              | 27                              | 75                | 1353                   | 2,64 MB             |
+| Filmes                | 32                              | 64                | 31748                  | 61,97 MB            |
+| Funcionários          | 27                              | 75                | 48                     | 96 KB               |
+| Mídias                | 40                              | 51                | 200008                 | 390,5 MB            |
+| Pagamentos            | 64                              | 32                | 1612907                | 3,07 GB             |
 
-| **Entidade / Índice** | **Tamanho por Registro (bytes)** | **Fator de Bloco** | **BM1 (Nº de Blocos)** | **BM2 (Nº de Blocos)** | **Espaço Utilizado** |
-|-----------------------|----------------------------------|--------------------|------------------------|------------------------|----------------------|
-| Geral                 | 32                               | 64                 | 157                    | 3                      | 320 KB               |
-| Clientes              | 27                               | 75                 | 1.334                  | 18                     | 2,64 MB              |
-| Filmes                | 32                               | 64                 | 31.250                 | 489                    | 61,95 MB             |
-| Funcionários          | 27                               | 75                 | 47                     | 1                      | 96,5 KB              |
-| Mídias                | 40                               | 51                 | 196.078                | 3.847                  | 390,3 MB               |
-| Pagamentos            | 64                               | 32                 | 1.562.500              | 48.829                 | 3,07 GB              | 
-
----
 
 ## Índices Multinível Dinâmico
-
-
-### Índice multinivel dinâmico (CPF_Cliente)
-
-Para o índice secundário, cada registro ocupa 23 bytes, sendo 11 do CPF_Cliente e 12 do ponteiro para o bloco do disco. Logo, tem-se:
-
-- **Fator de Bloco:** (2 * 1024 * 0.69) / (11 + 12) ≈ 61
-- **Número de Blocos:** (20.000.000 / 61) ≈ 327.869
-- **Altura da Árvore:** 5
-- **Altura dos Nós Índice:** 4
-
-
-
-### Índice multinivel dinâmico (CodFilme + CodAtor)
-
-Para o índice secundário, cada registro ocupa 44 bytes, sendo 16 do CodFilme, 16 do CodAtor e 12 do ponteiro para o bloco do disco. Logo, tem-se:
-
-- **Fator de Bloco:** (2 * 1024 * 0.69) / (16 + 16 + 12) ≈ 32
-- **Número de Blocos:** (1.000.000 / 32) ≈ 31.250
-- **Altura da Árvore:** 4
-- **Altura dos Nós Índice:** 3
-
-
-### Índice multinivel dinâmico (CodFilme)
-
-Para o índice secundário, cada registro ocupa 28 bytes, sendo 16 do CodFilme e 12 do ponteiro para o bloco do disco. Logo, tem-se:
-
-- **Fator de Bloco:** (2 * 1024 * 0.69) / (16 + 12) ≈ 50
-- **Número de Blocos:** (10.000.000 / 50) ≈ 200.000
-- **Altura da Árvore:** 5
-- **Altura dos Nós Índice:** 4
-
-
-
-### Índice multinivel dinâmico (ID_Midia + CPF_Cliente)
-
-Para o índice secundário, cada registro ocupa 47 bytes, sendo 24 do ID_Midia, 11 do CPF_Cliente e 12 do ponteiro para o bloco do disco. Logo, tem-se:
-
-- **Fator de Bloco:** (2 * 1024 * 0.69) / (24 + 11 + 12) ≈ 30
-- **Número de Blocos:** (50.000.000 / 30) ≈ 1.666.667
-- **Altura da Árvore:** 6
-- **Altura dos Nós Índice:** 5
-
-
-### Índice multinivel dinâmico (CPF_Cliente + ID_Midia + CPF_Funcionario)
-
-Para o índice secundário, cada registro ocupa 58 bytes, sendo 11 do CPF_Cliente, 24 do ID_Midia, 11 do CPF_Funcionario e 12 do ponteiro para o bloco do disco. Logo, tem-se:
-
-- **Fator de Bloco:** (2 * 1024 * 0.69) / (11 + 24 + 11 + 12) ≈ 24
-- **Número de Blocos:** (20.000.000 / 24) ≈ 833.333
-- **Altura da Árvore:** 6
-- **Altura dos Nós Índice:** 5
