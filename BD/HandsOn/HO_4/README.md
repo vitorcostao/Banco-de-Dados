@@ -98,7 +98,4 @@ A = movies ⨝ id = movie_id movies_genres
 ```
 
 **Explicação:**
-Esta consulta calcula as estatísticas de ranking (nota) para cada gênero de filme. Primeiro, une as tabelas `movies` e `movies_genres` usando `id = movie_id` para associar os rankings aos gêneros. O resultado dessa junção é então agrupado por `genre`, e são calculados o `avg(rank)` (média), `min(rank)` (mínimo) e `max(rank)` (máximo) dos rankings para cada gênero, renomeados para `Medio`, `Minimo` e `Maximo`, respectivamente.
-
-
-
+Esta consulta calcula as estatísticas de ranking (nota) para cada gênero de filme. Primeiro, une as tabelas `movies` e `movies_genres` usando `id = movie_id` para associar os rankings aos gêneros. O resultado dessa junção é então agrupado por `genre`, e são calculados o `avg(rank)` (média), `min(rank)` (mínimo) e `max(rank)` (máximo) dos rankings os gênero, renomeados para `Medio`, `Minimo` e `Maximo`, respectivamente. 

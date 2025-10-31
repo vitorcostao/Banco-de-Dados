@@ -143,6 +143,3 @@ Uma **linguagem de consulta** é utilizada para interagir com bancos de dados, p
 - **SDL** (Storage Definition Language)  
 - **DML** (Data Manipulation Language)
 
----
-
-Este README serve como referência rápida e organizada para quem deseja estudar os conceitos fundamentais de Sistemas de Banco de Dados e SGBD.
