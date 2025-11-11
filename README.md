@@ -51,3 +51,6 @@ Dentro do repositório existem duas pastas principais:
      * Tecnologias de armazenamento
      * Indexação de nível único
      * Indexação multinível
+     * Processamento de consulta
+     * Otimização de consulta
+     * Projeto físico
