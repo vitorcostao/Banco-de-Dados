@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `Abrigo` (
   `Cidade` VARCHAR(50) NULL,
   `Estado` VARCHAR(50) NULL,
   `Rua` VARCHAR(50) NULL,
-  `Numero` INT NULL,
+  `Numero` VARCHAR(10) NULL,
   `Ong_ID` INT NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE = InnoDB;
@@ -187,7 +187,7 @@ CREATE TABLE IF NOT EXISTS `Receptor` (
   `Estado` VARCHAR(50) NULL,
   `Cidade` VARCHAR(50) NULL,
   `Rua` VARCHAR(50) NULL,
-  `Numero` INT NULL,
+  `Numero` VARCHAR(10) NULL,
   PRIMARY KEY (`CPF`)
 ) ENGINE = InnoDB;
 
