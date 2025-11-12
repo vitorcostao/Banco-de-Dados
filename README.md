@@ -54,3 +54,8 @@ Dentro do repositório existem duas pastas principais:
      * Processamento de consulta
      * Otimização de consulta
      * Projeto físico
+
+
+3. **Trabalho prático**
+   Aplicando conhecimentos obtidos em sala para resolver um problema do mundo real. 
+
