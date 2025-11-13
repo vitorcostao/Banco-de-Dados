@@ -117,4 +117,10 @@ Os ajustes podem ocorrer em diferentes níveis:
 A aplicação contínua desses ajustes garante que o banco de dados permaneça eficiente, adaptado às necessidades reais da aplicação e capaz de processar consultas e transações de forma rápida e confiável.
 
 
-  
+## Referências Bibliográficas
+
+O documento cita as seguintes obras como referências:
+
+*   [1] Elmasri, Ramez; Navathe, Sham. Fundamentals of Database Systems. 7ed. Pearson, 2016.
+*   [2] Silberschatz, Abraham; Korth, Henry F.; Sudarshan, S. Database System Concepts. 6ed. McGraw-Hill, 2011.
+*   [3] Date, Christopher J. An Introduction to Database Systems. 8ed. Pearson, 2004.
