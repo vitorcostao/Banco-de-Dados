@@ -1,94 +1,119 @@
 -- -----------------------------------------------------
--- POPULAÇÃO DE DADOS
+-- POPULAÇÃO DO BANCO DE DADOS SAA
 -- -----------------------------------------------------
 
--- ONGs
+-- Desativa checagem de chave estrangeira temporariamente
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- -----------------------------------------------------
+-- 1. TABELAS PAIS
+-- -----------------------------------------------------
+
+-- Tabela: Ong
 INSERT INTO `Ong` (`ID`, `Nome`, `Descricao`) VALUES
-(1, 'Amigos dos Animais', 'ONG dedicada ao resgate e adoção de animais.'),
-(2, 'Patas Felizes', 'ONG que promove o bem-estar animal.'),
-(3, 'SOS Pet', 'Resgate e abrigo para animais abandonados.'),
-(4, 'Cuidar é Amar', 'Apoio à adoção e castração responsável.');
+(1, 'Amigo Bicho', 'Resgate e reabilitação de animais.'),
+(2, 'Patas Felizes', 'Adoções responsáveis de cães e gatos.'),
+(3, 'SOS Selvagem', 'Especializada em resgate de fauna.'),
+(4, 'Quatro Patas MG', 'Foco em castração social e apoio local.');
 
--- Abrigos
-INSERT INTO `Abrigo` (`ID`, `Nome`, `Email`, `Telefone`, `Pais`, `Cidade`, `Estado`, `Rua`, `Numero`, `Ong_ID`) VALUES
-(1, 'Abrigo Esperança', 'contato@esperanca.org', '11987654321', 'Brasil', 'São Paulo', 'SP', 'Rua das Flores', 120, 1),
-(2, 'Lar dos Bichos', 'larbichos@gmail.com', '21987541236', 'Brasil', 'Rio de Janeiro', 'RJ', 'Av. Central', 85, 2),
-(3, 'Refúgio Animal', 'refugioanimal@outlook.com', '31996587412', 'Brasil', 'Belo Horizonte', 'MG', 'Rua Verde', 42, 3),
-(4, 'Casa dos Pets', 'casadospets@yahoo.com', '47987456321', 'Brasil', 'Florianópolis', 'SC', 'Rua das Acácias', 230, 4);
-
--- Departamentos
-INSERT INTO `Departamento` (`ID`, `Nome`, `Telefone`, `Descricao`, `Ong_ID`) VALUES
-(1, 'Administração', '1132456789', 'Gestão e planejamento da ONG', 1),
-(2, 'Resgates', '2199876543', 'Equipe responsável por resgatar animais', 2),
-(3, 'Veterinário', '3199632587', 'Atendimento médico e exames', 3),
-(4, 'Adoção', '4799745632', 'Organização de feiras e adoções', 4);
-
--- Funcionários
-INSERT INTO `Funcionario` (`CPF`, `Nome`, `Email`, `Telefone`, `Cargo`, `Departamento_ID`, `Abrigo_ID`) VALUES
-('12345678900', 'Mariana Souza', 'mariana@esperanca.org', '11988887777', 'Gerente', 1, 1),
-('98765432100', 'Carlos Lima', 'carlos@larbichos.com', '21999998888', 'Resgatador', 2, 2),
-('11122233344', 'Fernanda Alves', 'fernanda@refugioanimal.com', '31988886666', 'Veterinária', 3, 3),
-('55566677788', 'Rafael Mendes', 'rafael@casadospets.org', '47977775555', 'Coordenador', 4, 4);
-
--- Doador
+-- Tabela: Doador
 INSERT INTO `Doador` (`ID`, `Nome`, `Telefone`) VALUES
-(1, 'Ana Martins', '11999990000'),
-(2, 'Pedro Oliveira', '21988881111'),
-(3, 'Julia Santos', '31977772222'),
-(4, 'Lucas Ferreira', '47966663333');
+(101, 'João Silva', '31998765432'),
+(102, 'Maria Oliveira', '11987654321'),
+(103, 'Carlos Pereira', '21991234567'),
+(104, 'Empresa Solidária', '4130302020');
 
--- Doações
-INSERT INTO `Doacao` (`Descricao`, `Quantia`, `Data`, `Ong_ID`, `Doador_ID`) VALUES
-('Ração para cães', 300.00, '2025-01-15', 1, 1),
-('Medicamentos veterinários', 450.00, '2025-02-10', 2, 2),
-('Materiais de limpeza', 200.00, '2025-03-20', 3, 3),
-('Roupinhas e cobertores', 150.00, '2025-04-05', 4, 4);
+-- Tabela: Receptor
+INSERT INTO `Receptor` (`CPF`, `Nome`, `Telefone`, `Estado`, `Cidade`, `Rua`, `Numero`) VALUES
+('11122233344', 'Ana Costa', '31988887777', 'MG', 'Belo Horizonte', 'Rua das Flores', '15'),
+('22233344455', 'Pedro Rocha', '21977776666', 'RJ', 'Niterói', 'Avenida Principal', '102'),
+('33344455566', 'Lúcia Ferreira', '11966665555', 'SP', 'São Paulo', 'Alameda dos Anjos', '300'),
+('44455566677', 'Rafaela Santos', '31955554444', 'MG', 'Contagem', 'Rua Nova', '22A');
 
--- Capturadores
-INSERT INTO `Capturador` (`CPF`, `Nome`, `Telefone`) VALUES
-('10101010101', 'Tiago Ramos', '11977778888'),
-('20202020202', 'Letícia Prado', '21966667777'),
-('30303030303', 'Felipe Duarte', '31955556666'),
-('40404040404', 'Camila Rocha', '47944445555');
-
--- Receptores (adotantes)
-INSERT INTO `Receptor` (`CPF`, `Nome`, `Telefone`, `Pais`, `Estado`, `Cidade`, `Rua`, `Numero`) VALUES
-('55555555555', 'Bruno Costa', '11933334444', 'Brasil', 'SP', 'São Paulo', 'Rua Bela Vista', 50),
-('66666666666', 'Laura Mendes', '21922223333', 'Brasil', 'RJ', 'Niterói', 'Av. Atlântica', 120),
-('77777777777', 'Patrícia Lima', '31911112222', 'Brasil', 'MG', 'Contagem', 'Rua das Palmeiras', 88),
-('88888888888', 'João Vieira', '47900001111', 'Brasil', 'SC', 'Blumenau', 'Rua Primavera', 32);
-
--- Veterinários
+-- Tabela: Veterinario
 INSERT INTO `Veterinario` (`CPF`, `Nome`, `Telefone`, `Especialidade`) VALUES
-('90909090909', 'Dr. André Pires', '11999997777', 'Clínico Geral'),
-('80808080808', 'Dra. Cláudia Reis', '21988886666', 'Cirurgiã'),
-('70707070707', 'Dr. Gustavo Nunes', '31977775555', 'Anestesista'),
-('60606060606', 'Dra. Helena Dias', '47966664444', 'Dermatologista');
+('55566677788', 'Dr. Ricardo Mello', '31944443333', 'Clínica Geral'),
+('66677788899', 'Dra. Sofia Lima', '11933332222', 'Cirurgia'),
+('77788899900', 'Dr. Felipe Alves', '21922221111', 'Oftalmologia'),
+('88899900011', 'Dra. Camila Nogueira', '31911110000', 'Felinos');
 
--- Animais
-INSERT INTO `Animal` (`ID`, `Nome`, `Sexo`, `Status`, `Peso`, `Especie`, `Abrigo_ID`) VALUES
-(1, 'Luna', 'F', 1, 8.5, 'Cachorro', 1),
-(2, 'Thor', 'M', 1, 12.0, 'Cachorro', 2),
-(3, 'Mia', 'F', 0, 4.2, 'Gato', 3),
-(4, 'Bob', 'M', 1, 10.3, 'Cachorro', 4);
+-- Tabela: Capturador
+INSERT INTO `Capturador` (`CPF`, `Nome`, `Telefone`) VALUES
+('99900011122', 'Mariana Gomes', '31910101010'),
+('00011122233', 'Roberto Pires', '11920202020'),
+('12345678900', 'Helena Dias', '31930303030'),
+('09876543210', 'Sergio Matos', '21940404040');
 
--- Capturas
-INSERT INTO `Captura` (`Animal_ID`, `Capturador_CPF`, `Local`, `Data`) VALUES
-(1, '10101010101', 'Parque Ibirapuera - SP', '2024-11-20'),
-(2, '20202020202', 'Copacabana - RJ', '2024-12-05'),
-(3, '30303030303', 'Praça Sete - BH', '2025-01-12'),
-(4, '40404040404', 'Centro - Florianópolis', '2025-02-08');
+-- Tabela: Animal (Sem FK de abrigo, pois N:N está em Abrigo_Animal)
+INSERT INTO `Animal` (`ID`, `Nome`, `Sexo`, `Status`, `Peso`, `Especie`) VALUES
+(1, 'Rex', 'M', 1, 35.50, 'Cachorro'),
+(2, 'Mimi', 'F', 0, 4.20, 'Gato'),
+(3, 'Apolo', 'M', 1, 12.00, 'Cachorro'),
+(4, 'Bolinha', 'F', 0, 5.00, 'Gato');
 
--- Atendimentos veterinários
-INSERT INTO `Atendimento` (`Animal_ID`, `Veterinario_CPF`, `Servico`, `Data`) VALUES
-(1, '90909090909', 'Vacinação antirrábica', '2025-03-10 10:30:00'),
-(2, '80808080808', 'Castração', '2025-03-12 14:00:00'),
-(3, '70707070707', 'Exame de sangue', '2025-03-15 09:00:00'),
-(4, '60606060606', 'Tratamento dermatológico', '2025-03-20 11:00:00');
+-- -----------------------------------------------------
+-- 2. TABELAS FILHAS 1:N
+-- -----------------------------------------------------
 
--- Adoções
-INSERT INTO `Adocao` (`Animal_ID`, `Receptor_CPF`, `Data`) VALUES
-(1, '55555555555', '2025-04-01'),
-(2, '66666666666', '2025-04-10'),
-(3, '77777777777', '2025-04-15'),
-(4, '88888888888', '2025-04-22');
+-- Tabela: Departamento (Depende de Ong)
+INSERT INTO `Departamento` (`ID`, `Nome`, `Telefone`, `Descricao`, `ID_Ong`) VALUES
+(10, 'Administrativo', '3133331111', 'Gestão financeira e burocrática', 1),
+(11, 'Resgate', '3133332222', 'Coordena as equipes de campo', 1),
+(12, 'Adoção', '1144443333', 'Processo de triagem de receptores', 2),
+(13, 'Comunicação', '3155554444', 'Marketing e mídias sociais', 4);
+
+-- Tabela: Abrigo (Depende de Ong)
+INSERT INTO `Abrigo` (`ID`, `Nome`, `Email`, `Telefone`, `Cidade`, `Estado`, `Rua`, `Numero`, `ID_Ong`) VALUES
+(50, 'Central BH', 'central@amigobicho.com', '3132221010', 'Belo Horizonte', 'MG', 'Av. Brasil', '100', 1),
+(51, 'Unidade Contagem', 'contagem@amigobicho.com', '3132222020', 'Contagem', 'MG', 'Rua Principal', '500', 1),
+(52, 'Sede SP', 'sede@patasfelizes.org', '1140003030', 'São Paulo', 'SP', 'Rua dos Gatos', '20', 2),
+(53, 'Abrigo Local', 'local@quatropatas.org', '3130301010', 'Betim', 'MG', 'Rua C', '1', 4);
+
+-- Tabela: Funcionario (Depende de Departamento e Abrigo)
+INSERT INTO `Funcionario` (`CPF`, `Nome`, `Email`, `Telefone`, `Cargo`, `ID_Departamento`, `ID_Abrigo`) VALUES
+('10101010101', 'Paula Mendes', 'paula@ong.com', '3199998888', 'Gerente', 10, 50),
+('20202020202', 'Marcos Lima', 'marcos@ong.com', '3199887777', 'Resgatista', 11, 51),
+('30303030303', 'Sofia Rocha', 'sofia@ong.com', '1199776666', 'Atendente Adocao', 12, 52),
+('40404040404', 'Bruno Neves', 'bruno@ong.com', '3199665555', 'Marketing', 13, 53);
+
+-- -----------------------------------------------------
+-- 3. TABELAS ASSOCIATIVAS N:N COM DADOS
+-- -----------------------------------------------------
+
+-- Tabela: Abrigo_Animal (Abrigo <-> Animal)
+INSERT INTO `Abrigo_Animal` (`Abrigo_ID`, `Animal_ID`) VALUES
+(50, 1), 
+(50, 2), 
+(51, 1), 
+(52, 3); 
+
+-- Tabela: Doacao (Doador <-> Ong)
+INSERT INTO `Doacao` (`ID_Doador`, `ID_Ong`, `Descricao`, `Quantia`, `Data`) VALUES
+(101, 1, 'Doação em dinheiro', 200.00, '2025-10-20'),
+(102, 2, 'Ração para gatos', 50.00, '2025-11-01'),
+(103, 1, 'Doação mensal', 100.00, '2025-11-10'),
+(104, 4, 'Caminhas e cobertores', 500.00, '2025-11-13');
+
+-- Tabela: Adocao (Animal <-> Receptor)
+INSERT INTO `Adocao` (`ID_Animal`, `CPF_Receptor`, `Data`) VALUES
+(4, '11122233344', '2025-11-05 10:00:00'), 
+(3, '22233344455', '2025-09-15 14:30:00'),
+(2, '33344455566', '2025-11-20 16:00:00'),
+(1, '44455566677', '2025-12-01 11:00:00');
+
+-- Tabela: Captura (Capturador <-> Animal)
+INSERT INTO `Captura` (`CPF_Capturador`, `ID_Animal`, `Local`, `Data`) VALUES
+('99900011122', 1, 'Rua das Gaivotas, Contagem', '2025-10-01 08:00:00'),
+('99900011122', 2, 'Praça da Liberdade, BH', '2025-10-05 15:00:00'),
+('00011122233', 3, 'Parque Municipal, Niterói', '2025-09-01 11:00:00'),
+('12345678900', 4, 'Bairro Jardim, Betim', '2025-11-04 17:00:00');
+
+-- Tabela: Atendimento (Veterinario <-> Animal)
+INSERT INTO `Atendimento` (`CPF_Veterinario`, `ID_Animal`, `Data`, `Servico`) VALUES
+('55566677788', 1, '2025-10-02 10:00:00', 'Primeira Avaliação e Vacinação'),
+('66677788899', 3, '2025-09-05 13:00:00', 'Cirurgia de Castração'),
+('55566677788', 2, '2025-10-06 09:30:00', 'Exame de Rotina'),
+('88899900011', 4, '2025-11-04 18:00:00', 'Avaliação Pós-Captura');
+
+-- Reativa checagem de chave estrangeira
+SET FOREIGN_KEY_CHECKS = 1;
